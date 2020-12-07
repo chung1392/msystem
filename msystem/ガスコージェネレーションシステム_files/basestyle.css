@@ -1,0 +1,121 @@
+﻿@charset "UTF-8";
+body {
+    text-align: left;
+}
+div.main_pane {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    font-family: "ＭＳ ゴシック";
+    user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select: none;
+    -moz-user-select:none;
+    -khtml-user-select:none;
+    -webkit-user-drag:none;
+    -khtml-user-drag:none;
+}
+div.parts_box {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+}
+div.parts_box.Graphic canvas {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+div.parts_box.Button,
+div.parts_box.LampButton,
+div.parts_box.DataInput {
+    cursor: pointer;
+}
+div.parts_box.Gauge div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+#message {
+    position: fixed;
+    width: 400px;
+    border: 0;
+    margin: 0;
+    padding: 15px;
+    border: 1px solid;
+    border-radius: 4px;
+    display: none;
+}
+#message .close {
+    float: right;
+    opacity: 0.5;
+    font-weight: bold;
+    text-decoration: none;
+}
+#message .number {
+    display: none;
+}
+#message .time:not(:empty):before {
+    content: "(";
+}
+#message .time:not(:empty):after {
+    content: ")";
+}
+#message .time {
+    display: none;
+}
+#message .button {
+    float: right;
+}
+#message button {
+    width: 90px;
+    height: 30px;
+    vertical-align: bottom;
+}
+#message button + button {
+    margin-left: 10px;
+}
+#message.input {
+    color: #FFFFFF;
+    background-color: #000000;
+    border-color: #000000;
+}
+#message.input .number {
+    text-align: center;
+    display: block;
+}
+#message.input .number input {
+    width: 300px;
+    height: 30px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: x-large;
+    color: #000000;
+    background-color: #FFFFFF;
+    text-align: center;
+    font-family: "ＭＳ ゴシック";
+}
+#message.confirm {
+    color: #8A6D3B;
+    background-color: #FCF8E3;
+    border-color: #FAEBCC;
+}
+#message.alert {
+    color: #A94442;
+    background-color: #F2DEDE;
+    border-color: #EBCCD1;
+}
+#message.alert button.cancel {
+    display: none;
+}
